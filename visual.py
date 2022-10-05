@@ -23,4 +23,4 @@ class Filler:
 
 
 
-			self.screen.fill(self.bg_color)
+			#self.screen.fill(self.bg_color)
