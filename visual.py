@@ -11,7 +11,6 @@ import pygame
 # purple (155,48,255) - #9B30FF
 # dark yellow (255,165,0) - #FFA500
 
-bg_black(0, 0, 0)
 class Filler:
 
 	def __init__(self):
@@ -20,7 +19,7 @@ class Filler:
 		self.screen = pygame.display.set_mode((1200, 800))
 		pygame.display.set_caption("FILLER")
 
-		self.bg_color = (230, 230, 230)
+		self.bg_color = (0, 0, 0)
 
 
 
