@@ -2,6 +2,9 @@ import sys
 
 import pygame
 
+# make the squares eventually pink and light pink, cyan and light cyan
+# black background, white and yellow text
+
 # black (0, 0, 0) - #000000
 # white smoke (245,245,245) - #F5F5F5
 # dark cyan (0,139,139) - #008B8B
@@ -24,3 +27,5 @@ class Filler:
 
 
 			#self.screen.fill(self.bg_color)
+
+
