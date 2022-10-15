@@ -6,6 +6,7 @@ deep_pink = (255,20,147)
 dark_pink = (139,10,80)
 purple = (155,48,255)
 yellow = (255,165,0)
+red = (240, 8, 8)
 
 class Settings:
 	"""A class to store all the settings for Alien Invasion"""
@@ -15,4 +16,4 @@ class Settings:
 		# Screen settings
 		self.screen_width = 1200
 		self.screen_height = 800
-		self.bg_colour = dark_cyan
+		self.bg_colour = black
