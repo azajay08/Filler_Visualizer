@@ -2,6 +2,7 @@ import pygame
 import pygame.font
 import os
 
+yellow = (255, 247, 0)
 grey = (32, 32, 32)
 t_colour = (255, 0 , 127)
 font_path = os.path.dirname(os.path.abspath(__file__))
