@@ -7,6 +7,7 @@ dark_cyan = (0,139,139)
 deep_pink = (255,20,147)
 dark_pink = (139,10,80)
 yellow = (255, 247, 0)
+purple = (155,48,255)
 
 font_path = os.path.dirname(os.path.abspath(__file__))
 retro = os.path.join(font_path, 'fonts', 'Retro.ttf')
@@ -22,7 +23,7 @@ class Players:
 		self.settings = filler.settings
 
 		self.p_name_colour = white
-		self.p1_colour = yellow
+		self.p1_colour = purple
 		self.p2_colour = light_cyan
 		self.p1_name = pygame.font.Font(retro, 40)
 		self.p2_name = pygame.font.Font(retro, 40)
