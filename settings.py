@@ -1,3 +1,6 @@
+import pygame
+import os
+
 black = (0, 0, 0)
 white_smoke = (245,245,245)
 light_cyan = (0,238,238)
@@ -7,6 +10,7 @@ dark_pink = (139,10,80)
 purple = (155,48,255)
 yellow = (255,165,0)
 red = (240, 8, 8)
+grey = (160, 160, 160)
 
 class Settings:
 	"""A class to store all the settings for Alien Invasion"""
@@ -17,3 +21,5 @@ class Settings:
 		self.screen_width = 1200
 		self.screen_height = 800
 		self.bg_colour = black
+
+		#grid settings 

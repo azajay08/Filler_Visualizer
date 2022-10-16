@@ -1,7 +1,13 @@
 import sys
 import pygame
 import os
+from time import sleep
+from score import Score
+from grid import Grid
+from pieces import Piece
+from players import Players
 from settings import Settings
+from title import Title
 
 # make the squares eventually pink and light pink, cyan and light cyan
 # black background, white and yellow text
@@ -10,11 +16,16 @@ class Filler:
 
 	def __init__(self):
 		pygame.init()
+		# pygame.mixer.init()
 		self.settings = Settings()
 
 		self.screen = pygame.display.set_mode((
 			self.settings.screen_width, self.settings.screen_height))
 		pygame.display.set_caption("FILLER")
+
+		# self.score = Score(self)
+		self.grid = Grid(self)
+		self.title = Title(self)
 
 	def run_game(self):
 		while True:
@@ -23,11 +34,13 @@ class Filler:
 					sys.exit()
 			
 			self.screen.fill(self.settings.bg_colour)
+			self.title.draw_title()
+			self.grid.draw_board()
 			pygame.display.flip()
 
 if __name__ == '__main__':
-	fil = Filler()
-	fil.run_game()
+	filler = Filler()
+	filler.run_game()
 
 
 
