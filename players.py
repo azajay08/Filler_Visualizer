@@ -32,21 +32,25 @@ class Players:
 
 	def draw_p1(self):
 		"""draw player 1 name"""
-		p1_name_str = "mtissari.filler"
-		self.player1_name = self.p1_name.render(p1_name_str, True,
-					self.p_name_colour, self.settings.bg_colour)
-		self.player1_rect = self.player1_name.get_rect()
-		self.player1_rect.left = self.screen_rect.left + 100
-		self.player1_rect.top = self.screen_rect.top + 350
-		self.screen.blit(self.player1_name, self.player1_rect)
-
 		p1_str = "Player.1"
 		self.player1 = self.p1.render(p1_str, True,
 					self.p1_colour, self.settings.bg_colour)
 		self.p1_rect = self.player1.get_rect()
+		# self.p1_rect.centery = self.player1_rect.centery - 30
+		# self.p1_rect.centerx = self.player1_rect.centerx
 		self.p1_rect.left = self.screen_rect.left + 60
 		self.p1_rect.top = self.screen_rect.top + 250
 		self.screen.blit(self.player1, self.p1_rect)
+
+		p1_name_str = "mtissari.filler"
+		self.player1_name = self.p1_name.render(p1_name_str, True,
+					self.p_name_colour, self.settings.bg_colour)
+		self.player1_rect = self.player1_name.get_rect()
+		self.player1_rect.centery = self.p1_rect.centery + 40
+		self.player1_rect.centerx = self.p1_rect.centerx
+		self.screen.blit(self.player1_name, self.player1_rect)
+
+		
 
 	def draw_p2(self):
 		"""draw player 2 name"""
