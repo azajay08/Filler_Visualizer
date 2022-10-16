@@ -31,13 +31,11 @@ class Players:
 
 
 	def draw_p1(self):
-		"""draw player 1 name"""
+		"""draw player1 and name"""
 		p1_str = "Player.1"
 		self.player1 = self.p1.render(p1_str, True,
 					self.p1_colour, self.settings.bg_colour)
 		self.p1_rect = self.player1.get_rect()
-		# self.p1_rect.centery = self.player1_rect.centery - 30
-		# self.p1_rect.centerx = self.player1_rect.centerx
 		self.p1_rect.left = self.screen_rect.left + 60
 		self.p1_rect.top = self.screen_rect.top + 250
 		self.screen.blit(self.player1, self.p1_rect)
@@ -46,22 +44,14 @@ class Players:
 		self.player1_name = self.p1_name.render(p1_name_str, True,
 					self.p_name_colour, self.settings.bg_colour)
 		self.player1_rect = self.player1_name.get_rect()
-		self.player1_rect.centery = self.p1_rect.centery + 40
+		self.player1_rect.centery = self.p1_rect.centery + 60
 		self.player1_rect.centerx = self.p1_rect.centerx
 		self.screen.blit(self.player1_name, self.player1_rect)
 
 		
 
 	def draw_p2(self):
-		"""draw player 2 name"""
-		p2_name_str = "ajones.filler"
-		self.player2_name = self.p2_name.render(p2_name_str, True,
-					self.p_name_colour, self.settings.bg_colour)
-		self.player2_rect = self.player2_name.get_rect()
-		self.player2_rect.right = self.screen_rect.right - 100
-		self.player2_rect.top = self.screen_rect.top + 350
-		self.screen.blit(self.player2_name, self.player2_rect)
-
+		"""draw player2 and name"""
 		p2_str = "Player.2"
 		self.player2 = self.p2.render(p2_str, True,
 					self.p2_colour, self.settings.bg_colour)
@@ -69,3 +59,11 @@ class Players:
 		self.p2_rect.right = self.screen_rect.right - 60
 		self.p2_rect.top = self.screen_rect.top + 250
 		self.screen.blit(self.player2, self.p2_rect)
+
+		p2_name_str = "ajones.filler"
+		self.player2_name = self.p2_name.render(p2_name_str, True,
+					self.p_name_colour, self.settings.bg_colour)
+		self.player2_rect = self.player2_name.get_rect()
+		self.player2_rect.centery = self.p2_rect.centery + 60
+		self.player2_rect.centerx = self.p2_rect.centerx
+		self.screen.blit(self.player2_name, self.player2_rect)
