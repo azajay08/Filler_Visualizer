@@ -14,11 +14,11 @@ class Grid:
 		self.screen_rect = self.screen.get_rect()
 		self.settings = filler.settings
 
-		self.width, self.height = 400, 400
+		self.width, self.height = 450, 450
 		self.grid_colour = grey
 
 		self.rect = pygame.Rect(0, 0, self.width, self.height)
-		self.rect.left = self.screen_rect.left + 400
+		self.rect.center = self.screen_rect.center
 		self.rect.bottom = self.screen_rect.bottom - 50
 
 	def draw_board(self):
