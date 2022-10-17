@@ -3,6 +3,10 @@ import pygame.font
 import os
 
 grey = (32, 32, 32)
+p1_old = (155,48,255)
+p1_new = (190, 140, 229)
+p2_old = (0,238,238)
+p2_new = (150, 187, 232)
 
 class Grid:
 	"""A class that will display the playing grid"""

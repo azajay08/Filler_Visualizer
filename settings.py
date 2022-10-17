@@ -12,7 +12,7 @@ yellow = (255,165,0)
 red = (240, 8, 8)
 grey = (160, 160, 160)
 orange = (254, 184, 70)
-navy = (0, 0, 20)
+navy = (0, 0, 25)
 
 class Settings:
 	"""A class to store all the settings for Alien Invasion"""

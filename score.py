@@ -27,7 +27,7 @@ class Score:
 		self.title_colour = peach
 		self.sep_colour = orange
 		self.title_font = pygame.font.Font(retro_font, 60)
-		self.sep_font = pygame.font.Font(retro_font, 60)
+		self.sep_font = pygame.font.Font(None, 60)
 
 		self.prep_score_title()
 
@@ -49,7 +49,7 @@ class Score:
 					self.sep_colour, self.settings.bg_colour)
 		self.sep_title_rect = self.sep_title.get_rect()
 		self.sep_title_rect.centerx = self.score_title_rect.centerx
-		self.sep_title_rect.top = self.score_title_rect.bottom
+		self.sep_title_rect.top = self.score_title_rect.bottom + 10
 
 
 	def draw_score_title(self):

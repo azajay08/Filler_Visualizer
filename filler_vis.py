@@ -38,8 +38,7 @@ class Filler:
 			self.screen.fill(self.settings.bg_colour)
 			self.title.draw_title()
 			self.score.draw_score_title()
-			self.player.draw_p1()
-			self.player.draw_p2()
+			self.player.draw_players()
 			self.grid.draw_board()
 			pygame.display.flip()
 
