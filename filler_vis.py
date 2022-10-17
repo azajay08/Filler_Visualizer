@@ -27,6 +27,7 @@ class Filler:
 		self.grid = Grid(self)
 		self.title = Title(self)
 		self.player = Players(self)
+		self.score = Score(self)
 
 	def run_game(self):
 		while True:
@@ -36,6 +37,7 @@ class Filler:
 			
 			self.screen.fill(self.settings.bg_colour)
 			self.title.draw_title()
+			self.score.draw_score_title()
 			self.player.draw_p1()
 			self.player.draw_p2()
 			self.grid.draw_board()

@@ -2,10 +2,12 @@ import pygame
 import pygame.font
 import os
 
+peach = (248, 118, 154)
 purple = (155,48,255)
 yellow = (255, 247, 0)
 grey = (32, 32, 32)
-t_colour = (255, 0 , 127)
+pink = (255, 0 , 127)
+orange = (254, 184, 70)
 font_path = os.path.dirname(os.path.abspath(__file__))
 retro_font = os.path.join(font_path, 'fonts', 'filler_font.otf')
 
@@ -20,16 +22,16 @@ class Title:
 
 		# self.width, self.height = 400, 400
 		# self.grid_colour = grey
-		self.title_colour = t_colour
+		self.title_colour = pink
 		self.font = pygame.font.Font(retro_font, 150)
 
 
 	def draw_title(self):
-		"""draw the grid"""
+		"""draw the title"""
 		title_str = "filler"
 		self.title = self.font.render(title_str, True,
 					self.title_colour, self.settings.bg_colour)
 		self.title_rect = self.title.get_rect()
 		self.title_rect.center = self.screen_rect.center
-		self.title_rect.top = self.screen_rect.top + 40
+		self.title_rect.top = self.screen_rect.top + 20
 		self.screen.blit(self.title, self.title_rect)

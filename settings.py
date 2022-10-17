@@ -11,6 +11,8 @@ purple = (155,48,255)
 yellow = (255,165,0)
 red = (240, 8, 8)
 grey = (160, 160, 160)
+orange = (254, 184, 70)
+navy = (0, 0, 20)
 
 class Settings:
 	"""A class to store all the settings for Alien Invasion"""
@@ -20,6 +22,6 @@ class Settings:
 		# Screen settings
 		self.screen_width = 1200
 		self.screen_height = 800
-		self.bg_colour = black
+		self.bg_colour = navy
 
 		#grid settings 
