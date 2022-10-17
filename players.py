@@ -38,7 +38,7 @@ class Players:
 					self.p1_colour, self.settings.bg_colour)
 		self.p1_rect = self.player1.get_rect()
 		self.p1_rect.left = self.screen_rect.left + 60
-		self.p1_rect.top = self.screen_rect.top + 250
+		self.p1_rect.top = self.screen_rect.top + 300
 		self.screen.blit(self.player1, self.p1_rect)
 
 		p1_name_str = "mtissari.filler"
@@ -58,7 +58,7 @@ class Players:
 					self.p2_colour, self.settings.bg_colour)
 		self.p2_rect = self.player2.get_rect()
 		self.p2_rect.right = self.screen_rect.right - 60
-		self.p2_rect.top = self.screen_rect.top + 250
+		self.p2_rect.top = self.screen_rect.top + 300
 		self.screen.blit(self.player2, self.p2_rect)
 
 		p2_name_str = "ajones.filler"

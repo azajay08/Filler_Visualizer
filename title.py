@@ -20,18 +20,20 @@ class Title:
 		self.screen_rect = self.screen.get_rect()
 		self.settings = filler.settings
 
-		# self.width, self.height = 400, 400
-		# self.grid_colour = grey
 		self.title_colour = pink
 		self.font = pygame.font.Font(retro_font, 150)
 
+		self.prep_title()
 
-	def draw_title(self):
-		"""draw the title"""
+	def prep_title(self):
+		"""prep the title"""
 		title_str = "filler"
 		self.title = self.font.render(title_str, True,
 					self.title_colour, self.settings.bg_colour)
 		self.title_rect = self.title.get_rect()
 		self.title_rect.center = self.screen_rect.center
 		self.title_rect.top = self.screen_rect.top + 20
+
+	def draw_title(self):
+		"""draw the title"""
 		self.screen.blit(self.title, self.title_rect)
