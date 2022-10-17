@@ -1,5 +1,6 @@
 import pygame
 import os
+import sys
 
 black = (0, 0, 0)
 white_smoke = (245,245,245)
@@ -25,3 +26,11 @@ class Settings:
 		self.bg_colour = navy
 
 		#grid settings 
+		self.get_player_info()
+		self.get_grid_info()
+
+	def get_player_info(self):
+		"""Read from stdin to get player info"""
+
+	def get_grid_info(self):
+		"""Read from stdin to get Plateau size"""

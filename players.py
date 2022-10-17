@@ -31,13 +31,7 @@ class Players:
 		self.p1 = pygame.font.Font(retro_p, 50)
 		self.p2 = pygame.font.Font(retro_p, 50)
 
-		self.get_players()
 		self.prep_players()
-	
-	def get_players(self):
-		"""Read from stdin to get player info"""
-		
-		
 
 	def prep_players(self):
 		"""Prep the players"""

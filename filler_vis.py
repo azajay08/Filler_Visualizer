@@ -18,7 +18,6 @@ class Filler:
 		pygame.init()
 		# pygame.mixer.init()
 		self.settings = Settings()
-
 		self.screen = pygame.display.set_mode((
 			self.settings.screen_width, self.settings.screen_height))
 		pygame.display.set_caption("FILLER")
