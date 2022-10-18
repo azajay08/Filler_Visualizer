@@ -27,11 +27,23 @@ class Settings:
 
 		#grid settings 
 		self.get_player_info()
-		self.get_grid_info()
+		# self.get_grid_info()
 
 	def get_player_info(self):
 		"""Read from stdin to get player info"""
-		
+		for line in range(5):
+			sys.stdin.readline()
+		line = sys.stdin.readline()
+		line_tmp = line.split("/")
+		self.p1 = line_tmp[-1]
+		self.p1 = self.p1.rstrip("\n")
+		line = sys.stdin.readline()
+		line = sys.stdin.readline()
+		line_tmp = line.split("/")
+		self.p2 = line_tmp[-1]
+		self.p2 = self.p2.rstrip("\n")
+		line = sys.stdin.readline()
+				
 
-	def get_grid_info(self):
-		"""Read from stdin to get Plateau size"""
+	# def get_grid_info(self):
+	# 	"""Read from stdin to get Plateau size"""

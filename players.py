@@ -22,14 +22,16 @@ class Players:
 		self.screen = filler.screen
 		self.screen_rect = self.screen.get_rect()
 		self.settings = filler.settings
+		self.p1 = self.settings.p1
+		self.p2 = self.settings.p2
 
 		self.p_name_colour = white
 		self.p1_colour = purple
 		self.p2_colour = light_cyan
 		self.p1_name = pygame.font.Font(retro, 40)
 		self.p2_name = pygame.font.Font(retro, 40)
-		self.p1 = pygame.font.Font(retro_p, 50)
-		self.p2 = pygame.font.Font(retro_p, 50)
+		self.player1_font = pygame.font.Font(retro_p, 50)
+		self.player2_font = pygame.font.Font(retro_p, 50)
 
 		self.prep_players()
 
@@ -37,12 +39,12 @@ class Players:
 		"""Prep the players"""
 		# Player 1
 		p1_str = "Player.1"
-		self.player1 = self.p1.render(p1_str, True,
+		self.player1 = self.player1_font.render(p1_str, True,
 					self.p1_colour, self.settings.bg_colour)
 		self.p1_rect = self.player1.get_rect()
 		self.p1_rect.left = self.screen_rect.left + 60
 		self.p1_rect.top = self.screen_rect.top + 300
-		p1_name_str = "mtissari.filler"
+		p1_name_str = self.p1
 		self.player1_name = self.p1_name.render(p1_name_str, True,
 					self.p_name_colour, self.settings.bg_colour)
 		self.player1_rect = self.player1_name.get_rect()
@@ -50,14 +52,14 @@ class Players:
 		self.player1_rect.centerx = self.p1_rect.centerx
 		# Player 2
 		p2_str = "Player.2"
-		self.player2 = self.p2.render(p2_str, True,
+		self.player2 = self.player2_font.render(p2_str, True,
 					self.p2_colour, self.settings.bg_colour)
 		self.p2_rect = self.player2.get_rect()
 		self.p2_rect.right = self.screen_rect.right - 60
 		self.p2_rect.top = self.screen_rect.top + 300
 		self.screen.blit(self.player2, self.p2_rect)
 
-		p2_name_str = "ajones.filler"
+		p2_name_str = self.p2
 		self.player2_name = self.p2_name.render(p2_name_str, True,
 					self.p_name_colour, self.settings.bg_colour)
 		self.player2_rect = self.player2_name.get_rect()
