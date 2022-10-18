@@ -31,6 +31,7 @@ class Settings:
 
 	def get_player_info(self):
 		"""Read from stdin to get player info"""
+		
 
 	def get_grid_info(self):
 		"""Read from stdin to get Plateau size"""
