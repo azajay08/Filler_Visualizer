@@ -34,21 +34,27 @@ class Filler:
 
 	def run_game(self):
 		while True:
-			for event in pygame.event.get():
-				if event.type == pygame.QUIT:
-					sys.exit()
-			
 			self.screen.fill(self.settings.bg_colour)
+			self._check_events()
 			self.title.draw_title()
 			self.score.draw_score_title()
 			self.player.draw_players()
 			self.grid.draw_board()
 			clock.tick(fps)
+			
 			pygame.display.flip()
+
+	def _check_events(self):
+		"""Function that check events in the program"""
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
+				sys.exit()
+			elif event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_q:
+					sys.exit()
+				#check buttons or speed
 
 if __name__ == '__main__':
 	filler = Filler()
 	filler.run_game()
-
-
 
