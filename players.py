@@ -55,7 +55,6 @@ class Players:
 		self.p2_rect = self.player2.get_rect()
 		self.p2_rect.right = self.screen_rect.right - 60
 		self.p2_rect.top = self.screen_rect.top + 300
-		self.screen.blit(self.player2, self.p2_rect)
 
 		p2_name_str = self.p2
 		self.player2_name = self.pname_font.render(p2_name_str, True,

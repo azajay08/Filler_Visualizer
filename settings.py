@@ -25,9 +25,13 @@ class Settings:
 		self.screen_height = 800
 		self.bg_colour = navy
 
+		# delay and fps
+		self.delay = 100
+		self.fps = 120
+
 		#grid settings 
 		self.get_player_info()
-		# self.get_grid_info()
+		self.get_grid_info()
 
 	def get_player_info(self):
 		"""Read from stdin to get player info"""
@@ -45,5 +49,9 @@ class Settings:
 		line = sys.stdin.readline()
 				
 
-	# def get_grid_info(self):
-	# 	"""Read from stdin to get Plateau size"""
+	def get_grid_info(self):
+		"""Read from stdin to get Plateau size"""
+		line = sys.stdin.readline()
+		line = line.rstrip(':\n').split(' ')
+		self.m_height = int(line[1])
+		self.m_width = int(line[2])
