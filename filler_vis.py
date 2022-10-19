@@ -1,6 +1,7 @@
 import sys
 import pygame
 import os
+import time
 from time import sleep
 from score import Score
 from grid import Grid
@@ -8,6 +9,9 @@ from pieces import Piece
 from players import Players
 from settings import Settings
 from title import Title
+
+fps = 120
+clock = pygame.time.Clock()
 
 # make the squares eventually pink and light pink, cyan and light cyan
 # black background, white and yellow text
@@ -39,6 +43,7 @@ class Filler:
 			self.score.draw_score_title()
 			self.player.draw_players()
 			self.grid.draw_board()
+			clock.tick(fps)
 			pygame.display.flip()
 
 if __name__ == '__main__':
