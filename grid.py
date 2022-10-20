@@ -7,6 +7,7 @@ p1_old = (155,48,255)
 p1_new = (190, 140, 229)
 p2_old = (0,238,238)
 p2_new = (150, 187, 232)
+orange = (254, 184, 70)
 
 class Grid:
 	"""A class that will display the playing grid"""
@@ -27,7 +28,7 @@ class Grid:
 
 	def draw_board(self):
 		"""draw the grid"""
+		clear = pygame.Surface((430, 430))
+		clear.fill(p1_old)
 		self.screen.fill(self.grid_colour, self.rect)
-
-
-
+		self.screen.blit(clear, self.rect.topleft)
