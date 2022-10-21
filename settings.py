@@ -2,18 +2,18 @@ import pygame
 import os
 import sys
 
-black = (0, 0, 0)
-white_smoke = (245,245,245)
-light_cyan = (0,238,238)
-dark_cyan = (0,139,139)
-deep_pink = (255,20,147)
-dark_pink = (139,10,80)
-purple = (155,48,255)
-yellow = (255,165,0)
-red = (240, 8, 8)
-grey = (160, 160, 160)
+grey = (32, 32, 32)
+p1_old = (155,48,255)
+p1_new = (190, 140, 229)
+p2_old = (0,238,238)
+p2_new = (0,139,139)
 orange = (254, 184, 70)
 navy = (0, 0, 25)
+peach = (248, 118, 154)
+purple = (155,48,255)
+yellow = (255, 247, 0)
+pink = (255, 0 , 127)
+green = (7, 252, 203)
 
 class Settings:
 	"""A class to store all the settings for Alien Invasion"""
@@ -51,12 +51,23 @@ class Settings:
 
 	def get_grid_info(self):
 		"""Read from stdin to get Plateau size"""
-		line = sys.stdin.readline()
-		line = line.rstrip(':\n').split(' ')
-		self.m_height = int(line[1])
-		self.m_width = int(line[2])
+		self.line = sys.stdin.readline()
+		self.line = self.line.rstrip(':\n').split(' ')
+		self.m_height = int(self.line[1])
+		self.m_width = int(self.line[2])
 		if (self.m_height < self.m_width):
 			self.grid_scale = int(self.m_width)
 		else:
 			self.grid_scale = int(self.m_height)
-		self.grid_side = 450 / self.grid_scale
+		self.grid_side = 450 / self.grid_scale - 1
+
+		self.p1_old_piece = pygame.Surface((self.grid_side, self.grid_side))
+		self.p1_old_piece.fill(p1_old)
+		self.p1_new_piece = pygame.Surface((self.grid_side, self.grid_side))
+		self.p1_new_piece.fill(peach)
+		self.p2_old_piece = pygame.Surface((self.grid_side, self.grid_side))
+		self.p2_old_piece.fill(p2_old)
+		self.p2_new_piece = pygame.Surface((self.grid_side, self.grid_side))
+		self.p2_new_piece.fill(green)
+		self.empty = pygame.Surface((self.grid_side, self.grid_side))
+		self.empty.fill(grey)

@@ -56,3 +56,4 @@ class Score:
 		"""Draw score title to screen"""
 		self.screen.blit(self.score_title, self.score_title_rect)
 		self.screen.blit(self.sep_title, self.sep_title_rect)
+		

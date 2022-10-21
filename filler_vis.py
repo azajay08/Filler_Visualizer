@@ -1,3 +1,4 @@
+import readline
 import sys
 import pygame
 import os
@@ -27,25 +28,30 @@ class Filler:
 		pygame.display.set_caption("FILLER")
 
 		# self.score = Score(self)
-		
 		self.title = Title(self)
 		self.player = Players(self)
 		self.grid = Grid(self)
 		self.score = Score(self)
+		self.screen.fill(self.settings.bg_colour)
+		self.title.draw_title()
+		self.score.draw_score_title()
+		self.player.draw_players()
 
 	def run_game(self):
 		while True:
-			self.screen.fill(self.settings.bg_colour)
 			self._check_events()
-			self.title.draw_title()
-			self.score.draw_score_title()
-			self.player.draw_players()
-			self.grid.draw_board()
+			if 'Plateau' in self.settings.line:
+				# sys.stdin.readline()
+				# self.settings.line = sys.stdin.readline()
+				self.grid.draw_board()
+			# if 'Piece' in self
+			self.settings.line = sys.stdin.readline()
+
 			clock.tick(self.settings.fps)
-			
 			pygame.display.flip()
 			# pygame.display.update()
 			pygame.time.delay(int(self.settings.delay))
+			# sleep(10)
 
 	def _check_events(self):
 		"""Function that check events in the program"""
@@ -57,15 +63,23 @@ class Filler:
 					sys.exit()
 				#check buttons or speed
 				if event.key == pygame.K_1:
-					self.settings.delay = 100
+					self.settings.delay = 75
 				if event.key == pygame.K_2:
-					self.settings.delay = 200
+					self.settings.delay = 25
 				if event.key == pygame.K_3:
-					self.settings.delay = 300
+					self.settings.delay = 12
 				if event.key == pygame.K_4:
-					self.settings.delay = 400
+					self.settings.delay = 5
 				if event.key == pygame.K_5:
-					self.settings.delay = 500
+					self.settings.delay = 1
+				if event.key == pygame.K_6:
+					self.settings.delay = 0.5
+				if event.key == pygame.K_7:
+					self.settings.delay = 0.01
+				if event.key == pygame.K_8:
+					self.settings.delay = 0.0001
+				if event.key == pygame.K_9:
+					self.settings.delay = 0.000001
 				# if event.key == pygame.K_SPACE:
 				# 	pause_game()
 				
