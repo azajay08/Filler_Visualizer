@@ -3,11 +3,12 @@ import os
 import pygame
 from title import Title
 
+white = (245,245,245)
 peach = (248, 118, 154)
 purple = (155,48,255)
 yellow = (255, 247, 0)
 grey = (32, 32, 32)
-orange = (254, 184, 70)
+orange = (255, 102, 0)
 pink = (255, 0 , 127)
 font_path = os.path.dirname(os.path.abspath(__file__))
 retro_font = os.path.join(font_path, 'fonts', 'filler_grad.otf')
@@ -24,8 +25,8 @@ class Score:
 		self.title_rect = self.title.title_rect
 
 		# sep is a separator
-		self.title_colour = peach
-		self.sep_colour = orange
+		self.title_colour = orange
+		self.sep_colour = white
 		self.title_font = pygame.font.Font(retro_font, 60)
 		self.sep_font = pygame.font.Font(None, 60)
 
@@ -56,4 +57,3 @@ class Score:
 		"""Draw score title to screen"""
 		self.screen.blit(self.score_title, self.score_title_rect)
 		self.screen.blit(self.sep_title, self.sep_title_rect)
-		

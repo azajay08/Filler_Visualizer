@@ -64,4 +64,3 @@ class Grid:
 		self.settings.line = grid_str
 		return
 
-

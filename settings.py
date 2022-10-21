@@ -2,18 +2,14 @@ import pygame
 import os
 import sys
 
+white = (255, 255, 255)
 grey = (32, 32, 32)
-p1_old = (155,48,255)
-p1_new = (190, 140, 229)
-p2_old = (0,238,238)
-p2_new = (0,139,139)
-orange = (254, 184, 70)
+p1_old = (139,10,80) #dark pink
+p2_old = (0,139,139) # dark cyan
+p1_new = (255, 0, 127) # pink
+p2_new = (0,238,238) # light cyan
 navy = (0, 0, 25)
-peach = (248, 118, 154)
-purple = (155,48,255)
-yellow = (255, 247, 0)
-pink = (255, 0 , 127)
-green = (7, 252, 203)
+
 
 class Settings:
 	"""A class to store all the settings for Alien Invasion"""
@@ -64,10 +60,10 @@ class Settings:
 		self.p1_old_piece = pygame.Surface((self.grid_side, self.grid_side))
 		self.p1_old_piece.fill(p1_old)
 		self.p1_new_piece = pygame.Surface((self.grid_side, self.grid_side))
-		self.p1_new_piece.fill(peach)
+		self.p1_new_piece.fill(p1_new)
 		self.p2_old_piece = pygame.Surface((self.grid_side, self.grid_side))
 		self.p2_old_piece.fill(p2_old)
 		self.p2_new_piece = pygame.Surface((self.grid_side, self.grid_side))
-		self.p2_new_piece.fill(green)
+		self.p2_new_piece.fill(p2_new)
 		self.empty = pygame.Surface((self.grid_side, self.grid_side))
 		self.empty.fill(grey)

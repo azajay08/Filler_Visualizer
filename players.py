@@ -26,7 +26,7 @@ class Players:
 		self.p2 = self.settings.p2
 
 		self.p_name_colour = white
-		self.p1_colour = purple
+		self.p1_colour = deep_pink
 		self.p2_colour = light_cyan
 		self.pnum_font = pygame.font.Font(retro_p, 50)
 		self.pname_font = pygame.font.Font(retro, 40)

@@ -14,8 +14,6 @@ from title import Title
 
 clock = pygame.time.Clock()
 
-# make the squares eventually pink and light pink, cyan and light cyan
-# black background, white and yellow text
 
 class Filler:
 
@@ -32,6 +30,7 @@ class Filler:
 		self.player = Players(self)
 		self.grid = Grid(self)
 		self.score = Score(self)
+		# self.piece = Piece(self)
 		self.screen.fill(self.settings.bg_colour)
 		self.title.draw_title()
 		self.score.draw_score_title()
@@ -45,7 +44,11 @@ class Filler:
 				# self.settings.line = sys.stdin.readline()
 				self.grid.draw_board()
 			# if 'Piece' in self
-			self.settings.line = sys.stdin.readline()
+			self.settings.line = sys.stdin.readline().rstrip('\n')
+			# if 'Piece' in self.settings.line:
+			# 	self.piece
+			print(self.settings.line)
+			# if 'fin' in self.settings.line:
 
 			clock.tick(self.settings.fps)
 			pygame.display.flip()
