@@ -3,11 +3,6 @@ import pygame.font
 import os
 import sys
 
-# grey = (32, 32, 32)
-# p1_old = (155,48,255)
-# p1_new = (190, 140, 229)
-# p2_old = (0,238,238)
-# p2_new = (150, 187, 232)
 black = (0, 0, 0)
 orange = (254, 184, 70)
 navy = (0, 0, 25)
@@ -28,7 +23,6 @@ class Grid:
 		self.grid_colour = black
 
 		self.rect = pygame.Rect(0, 0, self.width, self.height)
-		# self.rect = pygame.Surface(self.width, self.height)
 		self.rect.center = self.screen_rect.center
 		self.rect.bottom = self.screen_rect.bottom - 50
 
@@ -38,8 +32,6 @@ class Grid:
 		x = 0
 		y_grid = self.rect.y
 		x_grid = self.rect.x
-		# self.screen.fill(self.grid_colour, self.rect)
-		# sys.stdin.readline()
 		str = sys.stdin.readline()
 		while (y < int(self.settings.m_height)):
 			str = sys.stdin.readline().rstrip('\n').split(' ')

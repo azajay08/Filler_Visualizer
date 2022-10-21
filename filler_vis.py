@@ -25,7 +25,6 @@ class Filler:
 			self.settings.screen_width, self.settings.screen_height))
 		pygame.display.set_caption("FILLER")
 
-		# self.score = Score(self)
 		self.title = Title(self)
 		self.player = Players(self)
 		self.grid = Grid(self)
@@ -40,10 +39,7 @@ class Filler:
 		while True:
 			self._check_events()
 			if 'Plateau' in self.settings.line:
-				# sys.stdin.readline()
-				# self.settings.line = sys.stdin.readline()
 				self.grid.draw_board()
-			# if 'Piece' in self
 			self.settings.line = sys.stdin.readline().rstrip('\n')
 			# if 'Piece' in self.settings.line:
 			# 	self.piece
@@ -53,7 +49,6 @@ class Filler:
 				p1_score = int(self.settings.line[3])
 				self.settings.line = sys.stdin.readline().rstrip('\n').split(' ')
 				p2_score = int(self.settings.line[3])
-				# self.player.print_winner(p1_score, p2_score)
 				if p1_score == p2_score:
 					winner = 0
 				elif p1_score > p2_score:
@@ -63,9 +58,7 @@ class Filler:
 
 			clock.tick(self.settings.fps)
 			pygame.display.flip()
-			# pygame.display.update()
 			pygame.time.delay(int(self.settings.delay))
-			# sleep(10)
 
 	def _check_events(self):
 		"""Function that check events in the program"""
