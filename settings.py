@@ -55,3 +55,8 @@ class Settings:
 		line = line.rstrip(':\n').split(' ')
 		self.m_height = int(line[1])
 		self.m_width = int(line[2])
+		if (self.m_height < self.m_width):
+			self.grid_scale = int(self.m_width)
+		else:
+			self.grid_scale = int(self.m_height)
+		self.grid_side = 450 / self.grid_scale

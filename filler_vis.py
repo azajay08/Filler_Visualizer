@@ -2,6 +2,7 @@ import sys
 import pygame
 import os
 import time
+import subprocess
 from time import sleep
 from score import Score
 from grid import Grid
@@ -54,17 +55,20 @@ class Filler:
 			elif event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_q:
 					sys.exit()
-				elif event.key == pygame.K_1:
-					self.settings.delay = 100
-				elif event.key == pygame.K_2:
-					self.settings.delay = 200
-				elif event.key == pygame.K_3:
-					self.settings.delay = 300
-				elif event.key == pygame.K_4:
-					self.settings.delay = 400
-				elif event.key == pygame.K_5:
-					self.settings.delay = 500
 				#check buttons or speed
+				if event.key == pygame.K_1:
+					self.settings.delay = 100
+				if event.key == pygame.K_2:
+					self.settings.delay = 200
+				if event.key == pygame.K_3:
+					self.settings.delay = 300
+				if event.key == pygame.K_4:
+					self.settings.delay = 400
+				if event.key == pygame.K_5:
+					self.settings.delay = 500
+				# if event.key == pygame.K_SPACE:
+				# 	pause_game()
+				
 
 if __name__ == '__main__':
 	filler = Filler()
