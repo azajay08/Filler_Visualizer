@@ -40,9 +40,6 @@ class Score:
 		self.score_title_rect = self.score_title.get_rect()
 		self.score_title_rect.centerx = self.title_rect.centerx
 		self.score_title_rect.top = self.title_rect.bottom
-		# self.score_title_rect.center = self.screen_rect.center
-		# self.score_title_rect.top = self.screen_rect.top + 175
-		
 
 		# Inserts a separator for scores
 		sep_str = "|"
