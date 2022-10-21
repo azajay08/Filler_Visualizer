@@ -28,6 +28,7 @@ class Players:
 		self.p_name_colour = white
 		self.p1_colour = deep_pink
 		self.p2_colour = light_cyan
+		self.winner_colour = yellow
 		self.pnum_font = pygame.font.Font(retro_p, 50)
 		self.pname_font = pygame.font.Font(retro, 40)
 
@@ -63,6 +64,29 @@ class Players:
 		self.player2_rect.centery = self.p2_rect.centery + 60
 		self.player2_rect.centerx = self.p2_rect.centerx
 
+		#player 1 winner
+		winner_str = "Winner"
+		self.winner_g = self.pnum_font.render(winner_str, True,
+					self.winner_colour, self.settings.bg_colour)
+		self.p1_winner_rect = self.winner_g.get_rect()
+		self.p1_winner_rect.centerx = self.p1_rect.centerx
+		self.p1_winner_rect.centery = self.p1_rect.centery - 60
+		self.winner_w = self.pnum_font.render(winner_str, True,
+					white, self.settings.bg_colour)
+		self.p1_winner_rect = self.winner_w.get_rect()
+		self.p1_winner_rect.centerx = self.p1_rect.centerx
+		self.p1_winner_rect.centery = self.p1_rect.centery - 60
+
+
+		# player 2 winner
+		self.p2_winner_rect = self.winner_g.get_rect()
+		self.p2_winner_rect.centerx = self.p2_rect.centerx
+		self.p2_winner_rect.centery = self.p2_rect.centery - 60
+
+		self.p2_winner_rect = self.winner_w.get_rect()
+		self.p2_winner_rect.centerx = self.p2_rect.centerx
+		self.p2_winner_rect.centery = self.p2_rect.centery - 60
+
 
 	def draw_players(self):
 		"""draw player title and name"""
@@ -70,3 +94,5 @@ class Players:
 		self.screen.blit(self.player1_name, self.player1_rect)
 		self.screen.blit(self.player2, self.p2_rect)
 		self.screen.blit(self.player2_name, self.player2_rect)
+
+

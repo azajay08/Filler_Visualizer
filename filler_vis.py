@@ -48,7 +48,18 @@ class Filler:
 			# if 'Piece' in self.settings.line:
 			# 	self.piece
 			print(self.settings.line)
-			# if 'fin' in self.settings.line:
+			if 'fin' in self.settings.line:
+				self.settings.line = self.settings.line.split(' ')
+				p1_score = int(self.settings.line[3])
+				self.settings.line = sys.stdin.readline().rstrip('\n').split(' ')
+				p2_score = int(self.settings.line[3])
+				# self.player.print_winner(p1_score, p2_score)
+				if p1_score == p2_score:
+					winner = 0
+				elif p1_score > p2_score:
+					self.screen.blit(self.player.winner_g, self.player.p1_winner_rect)
+				else:
+					self.screen.blit(self.player.winner_g, self.player.p2_winner_rect)
 
 			clock.tick(self.settings.fps)
 			pygame.display.flip()
