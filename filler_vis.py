@@ -12,6 +12,8 @@ from players import Players
 from settings import Settings
 from title import Title
 
+white = (255, 255, 255)
+
 clock = pygame.time.Clock()
 
 
@@ -29,7 +31,7 @@ class Filler:
 		self.player = Players(self)
 		self.grid = Grid(self)
 		self.score = Score(self)
-		# self.piece = Piece(self)
+		self.piece = Piece(self)
 		self.screen.fill(self.settings.bg_colour)
 		self.title.draw_title()
 		self.score.draw_score_title()
@@ -41,14 +43,16 @@ class Filler:
 			if 'Plateau' in self.settings.line:
 				self.grid.draw_board()
 			self.settings.line = sys.stdin.readline().rstrip('\n')
-			# if 'Piece' in self.settings.line:
-			# 	self.piece
+			if 'Piece' in self.settings.line:
+				print(self.settings.line)
+				self.piece.draw_piece(1)
 			print(self.settings.line)
 			if 'fin' in self.settings.line:
 				self.settings.line = self.settings.line.split(' ')
 				p1_score = int(self.settings.line[3])
 				self.settings.line = sys.stdin.readline().rstrip('\n').split(' ')
 				p2_score = int(self.settings.line[3])
+				# self.player.print_winner(p1_score, p2_score)
 				if p1_score == p2_score:
 					winner = 0
 				elif p1_score > p2_score:
@@ -58,7 +62,9 @@ class Filler:
 
 			clock.tick(self.settings.fps)
 			pygame.display.flip()
+			# pygame.display.update()
 			pygame.time.delay(int(self.settings.delay))
+			# sleep(10)
 
 	def _check_events(self):
 		"""Function that check events in the program"""
