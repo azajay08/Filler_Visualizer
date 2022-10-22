@@ -42,17 +42,16 @@ class Filler:
 			self._check_events()
 			if 'Plateau' in self.settings.line:
 				self.grid.draw_board()
+				self.score.draw_score()
 			self.settings.line = sys.stdin.readline().rstrip('\n')
 			if 'Piece' in self.settings.line:
-				print(self.settings.line)
 				self.piece.draw_piece(1)
-			print(self.settings.line)
+			# print(self.settings.line)
 			if 'fin' in self.settings.line:
 				self.settings.line = self.settings.line.split(' ')
 				p1_score = int(self.settings.line[3])
 				self.settings.line = sys.stdin.readline().rstrip('\n').split(' ')
 				p2_score = int(self.settings.line[3])
-				# self.player.print_winner(p1_score, p2_score)
 				if p1_score == p2_score:
 					winner = 0
 				elif p1_score > p2_score:
@@ -76,17 +75,17 @@ class Filler:
 					sys.exit()
 				#check buttons or speed
 				if event.key == pygame.K_1:
-					self.settings.delay = 100
+					self.settings.delay = 200
 				if event.key == pygame.K_2:
-					self.settings.delay = 75
+					self.settings.delay = 100
 				if event.key == pygame.K_3:
-					self.settings.delay = 50
+					self.settings.delay = 75
 				if event.key == pygame.K_4:
-					self.settings.delay = 25
+					self.settings.delay = 50
 				if event.key == pygame.K_5:
-					self.settings.delay = 10
+					self.settings.delay = 25
 				if event.key == pygame.K_6:
-					self.settings.delay = 5
+					self.settings.delay = 10
 				if event.key == pygame.K_7:
 					self.settings.delay = 1
 				if event.key == pygame.K_8:
