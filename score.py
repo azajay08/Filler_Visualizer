@@ -1,7 +1,6 @@
 import pygame.font
 import os
 import pygame
-from title import Title
 
 white = (245,245,245)
 orange = (255, 102, 0)

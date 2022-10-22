@@ -1,6 +1,5 @@
 import pygame.font
 import os
-import sys
 
 white = (245,245,245)
 light_cyan = (0,238,238)
@@ -68,15 +67,16 @@ class Players:
 		winner_str = "Winner"
 		self.winner_g = self.pnum_font.render(winner_str, True,
 					self.winner_colour, self.settings.bg_colour)
+		# Prints winner in gold
 		self.p1_winner_rect = self.winner_g.get_rect()
 		self.p1_winner_rect.centerx = self.p1_rect.centerx
 		self.p1_winner_rect.centery = self.p1_rect.centery - 60
+		# Print winner in white for flash effect
 		self.winner_w = self.pnum_font.render(winner_str, True,
 					white, self.settings.bg_colour)
 		self.p1_winner_rect = self.winner_w.get_rect()
 		self.p1_winner_rect.centerx = self.p1_rect.centerx
 		self.p1_winner_rect.centery = self.p1_rect.centery - 60
-
 
 		# player 2 winner
 		self.p2_winner_rect = self.winner_g.get_rect()

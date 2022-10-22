@@ -1,5 +1,4 @@
 import pygame
-import os
 import sys
 
 white = (255, 255, 255)
@@ -29,7 +28,7 @@ class Settings:
 		self.p1_score = 0
 		self.p2_score = 0
 
-		#grid settings 
+		# grid settings 
 		self.get_player_info()
 		self.get_grid_info()
 
