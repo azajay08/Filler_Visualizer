@@ -73,8 +73,8 @@ class Score:
 		self.p2_score_rect.centery = self.sep_title_rect.centery
 
 		# Create the box to clear the score each time
-		self.score_clear1 = pygame.Rect(0, 0, 70, 40)
-		self.score_clear2 = pygame.Rect(0, 0, 70, 40)
+		self.score_clear1 = pygame.Rect(0, 0, 150, 40)
+		self.score_clear2 = pygame.Rect(0, 0, 150, 40)
 
 		self.score_clear1.right = self.sep_title_rect.left - 30
 		self.score_clear1.centery = self.sep_title_rect.centery
