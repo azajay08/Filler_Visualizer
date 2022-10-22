@@ -3,6 +3,11 @@ import pygame.font
 import os
 import sys
 
+# grey = (32, 32, 32)
+# p1_old = (155,48,255)
+# p1_new = (190, 140, 229)
+# p2_old = (0,238,238)
+# p2_new = (150, 187, 232)
 black = (0, 0, 0)
 orange = (254, 184, 70)
 navy = (0, 0, 25)
@@ -21,8 +26,11 @@ class Grid:
 
 		self.width, self.height = 450, 450
 		self.grid_colour = black
+		self.p1_score = 0
+		self.p2_score = 0
 
 		self.rect = pygame.Rect(0, 0, self.width, self.height)
+		# self.rect = pygame.Surface(self.width, self.height)
 		self.rect.center = self.screen_rect.center
 		self.rect.bottom = self.screen_rect.bottom - 50
 
@@ -30,6 +38,8 @@ class Grid:
 		"""draw the grid"""
 		y = 0
 		x = 0
+		p1_turn = 0
+		p2_turn = 0
 		y_grid = self.rect.y
 		x_grid = self.rect.x
 		str = sys.stdin.readline()
@@ -42,17 +52,30 @@ class Grid:
 					self.screen.blit(self.settings.empty, (x_grid, y_grid))
 				if grid_str[x] == 'O':
 					self.screen.blit(self.settings.p1_old_piece, (x_grid, y_grid))
-				if grid_str[x] == 'o':
-					self.screen.blit(self.settings.p1_new_piece, (x_grid, y_grid))
-				if grid_str[x] == 'x':
-					self.screen.blit(self.settings.p2_new_piece, (x_grid, y_grid))
 				if grid_str[x] == 'X':
 					self.screen.blit(self.settings.p2_old_piece, (x_grid, y_grid))
+				if grid_str[x] == 'o':
+					p1_turn = 1
+					self.screen.blit(self.settings.p1_new_piece, (x_grid, y_grid))
+				if grid_str[x] == 'x':
+					p2_turn = 1
+					self.screen.blit(self.settings.p2_new_piece, (x_grid, y_grid))
 				x += 1
 				x_grid += self.settings.grid_side + 1
 			x_grid = self.rect.x
 			y_grid += self.settings.grid_side + 1
 			y += 1
 		self.settings.line = grid_str
-		return
+		if p1_turn == 1:
+			self.settings.p1_score += 1
+		elif p2_turn == 1:
+			self.settings.p2_score += 1
+		# if p1_turn == 1:
+		# 	self.settings.p1_score += 1
+		# 	return (1)
+		# elif p2_turn == 1:
+		# 	self.settings.p2_score += 1
+		# 	return (2)
+
+
 

@@ -22,8 +22,12 @@ class Settings:
 		self.bg_colour = navy
 
 		# delay and fps
-		self.delay = 100
+		self.delay = 200
 		self.fps = 120
+
+		# Set scores to 0
+		self.p1_score = 0
+		self.p2_score = 0
 
 		#grid settings 
 		self.get_player_info()

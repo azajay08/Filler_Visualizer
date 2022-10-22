@@ -83,7 +83,7 @@ class Players:
 		self.p2_winner_rect.centerx = self.p2_rect.centerx
 		self.p2_winner_rect.centery = self.p2_rect.centery - 60
 
-		self.p2_winner_rect = self.winner_w.get_rect()
+		self.p2_winner_rect = self.winner_g.get_rect()
 		self.p2_winner_rect.centerx = self.p2_rect.centerx
 		self.p2_winner_rect.centery = self.p2_rect.centery - 60
 
@@ -94,5 +94,3 @@ class Players:
 		self.screen.blit(self.player1_name, self.player1_rect)
 		self.screen.blit(self.player2, self.p2_rect)
 		self.screen.blit(self.player2_name, self.player2_rect)
-
-

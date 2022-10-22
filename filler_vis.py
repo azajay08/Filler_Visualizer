@@ -45,7 +45,7 @@ class Filler:
 				self.score.draw_score()
 			self.settings.line = sys.stdin.readline().rstrip('\n')
 			if 'Piece' in self.settings.line:
-				self.piece.draw_piece(1)
+				self.piece.draw_piece()
 			# print(self.settings.line)
 			if 'fin' in self.settings.line:
 				self.settings.line = self.settings.line.split(' ')
