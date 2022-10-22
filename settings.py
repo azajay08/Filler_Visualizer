@@ -20,6 +20,8 @@ class Settings:
 		self.screen_height = 800
 		self.bg_colour = navy
 
+		self.author = " ajones"
+
 		# delay and fps
 		self.delay = 200
 		self.fps = 120
