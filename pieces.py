@@ -1,6 +1,5 @@
 import pygame.font
 import pygame
-import os
 import sys
 
 p1_colour = (255, 0, 127) # pink
@@ -24,17 +23,13 @@ class Piece:
 		g_size = 200
 		str_line = []
 		line = self.settings.line.rstrip(':').split(' ')
-		# print(f"This - {line}\n")
 		p_height = int(line[1])
 		p_width = int(line[2])
-		# print(p_height, p_width)
 		if p_height < p_width:
 			p_scale = int(p_width)
 		else:
 			p_scale = int(p_height)
 		p_size = g_size / p_scale
-
-		# sys.stdin.readline()
 
 		p1_rect = pygame.Rect(0, 0, g_size, g_size)
 		p2_rect = pygame.Rect(0, 0, g_size, g_size)
@@ -59,20 +54,12 @@ class Piece:
 		x = 0
 		for i in range(p_height):
 			str_line.append(sys.stdin.readline().rstrip('\n'))
-		# while (i < int(p_height)):
-		# 	str_line[i].append(sys.stdin.readline().rstrip('\n'))
-		# 	print(line[i])
-		# 	i += 1
 		self.settings.line = sys.stdin.readline().rstrip('\n')
 		y_grid = p1_rect.y
 		x_grid = p1_rect.x
 		rect_x = p1_rect.x
 		piece = p1_piece
 		if ' (O):' in self.settings.line :
-			# y_grid = p1_rect.y
-			# x_grid = p1_rect.x
-			# rect_x = p1_rect.x
-			# piece = p1_piece
 			self.screen.blit(clear_piece, p1_rect)
 		elif ' (X):' in self.settings.line :
 			y_grid = p2_rect.y
@@ -83,7 +70,6 @@ class Piece:
 		while (y < int(p_height)):
 			x = 0
 			while (x < int(p_width)):
-				print(str_line[y])
 				if (str_line[y][x] == '*'):
 					self.screen.blit(piece, (x_grid, y_grid))
 				if (str_line[y][x] == '.'):

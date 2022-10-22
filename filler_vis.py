@@ -1,9 +1,5 @@
-import readline
 import sys
 import pygame
-import os
-import time
-import subprocess
 from time import sleep
 from score import Score
 from grid import Grid
