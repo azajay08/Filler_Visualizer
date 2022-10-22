@@ -1,13 +1,7 @@
 import pygame
 import pygame.font
-import os
 import sys
 
-# grey = (32, 32, 32)
-# p1_old = (155,48,255)
-# p1_new = (190, 140, 229)
-# p2_old = (0,238,238)
-# p2_new = (150, 187, 232)
 black = (0, 0, 0)
 orange = (254, 184, 70)
 navy = (0, 0, 25)
@@ -30,7 +24,6 @@ class Grid:
 		self.p2_score = 0
 
 		self.rect = pygame.Rect(0, 0, self.width, self.height)
-		# self.rect = pygame.Surface(self.width, self.height)
 		self.rect.center = self.screen_rect.center
 		self.rect.bottom = self.screen_rect.bottom - 50
 
@@ -70,12 +63,3 @@ class Grid:
 			self.settings.p1_score += 1
 		elif p2_turn == 1:
 			self.settings.p2_score += 1
-		# if p1_turn == 1:
-		# 	self.settings.p1_score += 1
-		# 	return (1)
-		# elif p2_turn == 1:
-		# 	self.settings.p2_score += 1
-		# 	return (2)
-
-
-

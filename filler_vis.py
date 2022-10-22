@@ -42,13 +42,13 @@ class Filler:
 			self.settings.line = sys.stdin.readline().rstrip('\n')
 			if 'Piece' in self.settings.line:
 				self.piece.draw_piece()
-			# print(self.settings.line)
 			if 'fin' in self.settings.line:
 				self.settings.line = self.settings.line.split(' ')
 				p1_score = int(self.settings.line[3])
 				self.settings.line = sys.stdin.readline().rstrip('\n').split(' ')
 				p2_score = int(self.settings.line[3])
 				if p1_score == p2_score:
+					# will add this for a Draw
 					winner = 0
 				elif p1_score > p2_score:
 					self.screen.blit(self.player.winner_g, self.player.p1_winner_rect)
@@ -95,4 +95,3 @@ class Filler:
 if __name__ == '__main__':
 	filler = Filler()
 	filler.run_game()
-
