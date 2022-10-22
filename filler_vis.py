@@ -76,21 +76,21 @@ class Filler:
 					sys.exit()
 				#check buttons or speed
 				if event.key == pygame.K_1:
-					self.settings.delay = 75
+					self.settings.delay = 100
 				if event.key == pygame.K_2:
-					self.settings.delay = 25
+					self.settings.delay = 75
 				if event.key == pygame.K_3:
-					self.settings.delay = 12
+					self.settings.delay = 50
 				if event.key == pygame.K_4:
-					self.settings.delay = 5
+					self.settings.delay = 25
 				if event.key == pygame.K_5:
-					self.settings.delay = 1
+					self.settings.delay = 10
 				if event.key == pygame.K_6:
-					self.settings.delay = 0.5
+					self.settings.delay = 5
 				if event.key == pygame.K_7:
-					self.settings.delay = 0.01
+					self.settings.delay = 1
 				if event.key == pygame.K_8:
-					self.settings.delay = 0.0001
+					self.settings.delay = 0.01
 				if event.key == pygame.K_9:
 					self.settings.delay = 0.000001
 				# if event.key == pygame.K_SPACE:
