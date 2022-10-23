@@ -88,4 +88,3 @@ class Score:
 		# Prints the scores again
 		self.screen.blit(self.p1_score_print, self.p1_score_rect)
 		self.screen.blit(self.p2_score_print, self.p2_score_rect)
-

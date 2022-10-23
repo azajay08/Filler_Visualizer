@@ -83,10 +83,14 @@ class Players:
 		self.p2_winner_rect.centerx = self.p2_rect.centerx
 		self.p2_winner_rect.centery = self.p2_rect.centery - 60
 
-		self.p2_winner_rect = self.winner_g.get_rect()
+		self.p2_winner_rect = self.winner_w.get_rect()
 		self.p2_winner_rect.centerx = self.p2_rect.centerx
 		self.p2_winner_rect.centery = self.p2_rect.centery - 60
 
+		# print draw
+		draw_str = "  Draw"
+		self.draw = self.pnum_font.render(draw_str, True,
+					white, self.settings.bg_colour)
 
 	def draw_players(self):
 		"""draw player title and name"""

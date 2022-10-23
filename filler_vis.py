@@ -22,7 +22,7 @@ class Filler:
 
 	def __init__(self):
 		pygame.init()
-		# pygame.mixer.init()
+		pygame.mixer.init()
 		self.settings = Settings()
 		self.screen = pygame.display.set_mode((
 			self.settings.screen_width, self.settings.screen_height))
@@ -39,6 +39,7 @@ class Filler:
 		self.player.draw_players()
 
 	def run_game(self):
+		pygame.mixer.music.play(-1)
 		while True:
 			self._check_events()
 			if 'Plateau' in self.settings.line:

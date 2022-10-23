@@ -1,5 +1,6 @@
 import pygame
 import sys
+import os
 
 white = (255, 255, 255)
 grey = (32, 32, 32)
@@ -29,6 +30,10 @@ class Settings:
 		# Set scores to 0
 		self.p1_score = 0
 		self.p2_score = 0
+
+		# Initialize the music
+		s = os.path.dirname(os.path.abspath(__file__))
+		self.music = pygame.mixer.music.load(os.path.join(s, 'sounds', '80s_banger.ogg'))
 
 		# grid settings 
 		self.get_player_info()
