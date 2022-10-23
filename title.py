@@ -25,6 +25,7 @@ class Title:
 		self.title_colour = purple
 		self.font = pygame.font.Font(retro_font, 150)
 		self.by_font = pygame.font.Font(retro, 25)
+		self.controls_font = pygame.font.Font(retro, 35)
 
 		self.prep_title()
 
@@ -42,7 +43,23 @@ class Title:
 		self.by_rect = self.by.get_rect()
 		self.by_rect.topleft = self.screen_rect.topleft
 
+		c_str = "Press 1 to 9 to change speed"
+		self.controls = self.controls_font.render(c_str, True,
+					white, self.settings.bg_colour)
+		self.controls_rect = self.controls.get_rect()
+		self.controls_rect.bottom = self.screen_rect.bottom - 15
+		self.controls_rect.left = self.screen_rect.left + 15
+
+		pause_str = "Press SPACE to pause"
+		self.p_controls = self.controls_font.render(pause_str, True,
+					white, self.settings.bg_colour)
+		self.p_controls_rect = self.p_controls.get_rect()
+		self.p_controls_rect.bottom = self.screen_rect.bottom - 15
+		self.p_controls_rect.right = self.screen_rect.right - 15
+
 	def draw_title(self):
 		"""draw the title"""
 		self.screen.blit(self.title, self.title_rect)
 		self.screen.blit(self.by, self.by_rect)
+		self.screen.blit(self.controls, self.controls_rect)
+		self.screen.blit(self.p_controls, self.p_controls_rect)
