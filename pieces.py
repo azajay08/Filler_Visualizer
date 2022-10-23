@@ -16,8 +16,6 @@ class Piece:
 		self.settings = filler.settings
 		self.player = filler.player
 
-
-
 	def draw_piece(self):
 		"""Draws the piece underneath the respective player"""
 		g_size = 200
