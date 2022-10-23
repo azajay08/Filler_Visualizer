@@ -2,6 +2,7 @@ import pygame
 import pygame.font
 import os
 
+red = (255, 0, 0)
 white = (255, 255, 255)
 peach = (248, 118, 154)
 purple = (155,48,255)
@@ -57,9 +58,17 @@ class Title:
 		self.p_controls_rect.bottom = self.screen_rect.bottom - 15
 		self.p_controls_rect.right = self.screen_rect.right - 15
 
+		quit_str = "Press Q to quit"
+		self.q_controls = self.controls_font.render(quit_str, True,
+					red, self.settings.bg_colour)
+		self.q_controls_rect = self.q_controls.get_rect()
+		self.q_controls_rect.top = self.screen_rect.top + 15
+		self.q_controls_rect.right = self.screen_rect.right - 15
+
 	def draw_title(self):
 		"""draw the title"""
 		self.screen.blit(self.title, self.title_rect)
 		self.screen.blit(self.by, self.by_rect)
 		self.screen.blit(self.controls, self.controls_rect)
 		self.screen.blit(self.p_controls, self.p_controls_rect)
+		self.screen.blit(self.q_controls, self.q_controls_rect)
