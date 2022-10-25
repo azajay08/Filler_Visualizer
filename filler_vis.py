@@ -10,7 +10,6 @@ from settings import Settings
 from title import Title
 
 white = (255, 255, 255)
-orange = (255, 102, 0)
 
 clock = pygame.time.Clock()
 

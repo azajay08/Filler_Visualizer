@@ -2,7 +2,6 @@ import pygame
 import sys
 import os
 
-white = (255, 255, 255)
 grey = (32, 32, 32)
 p1_old = (139,10,80) #dark pink
 p2_old = (0,139,139) # dark cyan

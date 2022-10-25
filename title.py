@@ -4,12 +4,7 @@ import os
 
 red = (255, 0, 0)
 white = (255, 255, 255)
-peach = (248, 118, 154)
 purple = (155,48,255)
-yellow = (255, 247, 0)
-grey = (32, 32, 32)
-pink = (255, 0 , 127)
-orange = (255, 102, 0)
 font_path = os.path.dirname(os.path.abspath(__file__))
 retro = os.path.join(font_path, 'fonts', 'Retro.ttf')
 retro_font = os.path.join(font_path, 'fonts', 'filler_font.otf')

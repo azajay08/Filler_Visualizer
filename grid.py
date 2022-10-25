@@ -3,10 +3,6 @@ import pygame.font
 import sys
 
 black = (0, 0, 0)
-orange = (254, 184, 70)
-navy = (0, 0, 25)
-grey = (32, 32, 32)
-peach = (248, 118, 154)
 
 class Grid:
 	"""A class that will display the playing grid"""
