@@ -43,11 +43,17 @@ class Settings:
 		for line in range(5):
 			sys.stdin.readline()
 		line = sys.stdin.readline()
+		line_tmp = line.split(" ")
+		self.p1_arg = line_tmp[1]
+		self.p1_arg = self.p1_arg.rstrip("\n")
 		line_tmp = line.split("/")
 		self.p1 = line_tmp[-1]
 		self.p1 = self.p1.rstrip("\n")
 		line = sys.stdin.readline()
 		line = sys.stdin.readline()
+		line_tmp = line.split(" ")
+		self.p2_arg = line_tmp[1]
+		self.p2_arg = self.p2_arg.rstrip("\n")
 		line_tmp = line.split("/")
 		self.p2 = line_tmp[-1]
 		self.p2 = self.p2.rstrip("\n")
